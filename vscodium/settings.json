@@ -1,0 +1,24 @@
+{
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.codeLens": false,
+    "editor.dragAndDrop": false,
+    "editor.inlayHints.enabled": "off",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.showTabs": "none",
+    "editor.quickSuggestionsDelay": 999999999,
+    "editor.suggest.selectionMode": "never",
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "editor.snippetSuggestions": "none",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "keyboard.dispatch": "keyCode",
+    "window.zoomLevel": -1
+}
