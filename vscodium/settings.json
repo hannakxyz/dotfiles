@@ -1,15 +1,23 @@
+// Hanna's vs code settings, which are for whatever reason in a file different than the keybinds
 {
+    // Disable "features" that just make editing a nightmare
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingComments": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+
+    // Disable really stupid features (why are these opt-in rather than opt-out??? please dont throw useless garbage features at me thanks)
+    "editor.find.seedSearchStringFromSelection": "never",
     "editor.codeLens": false,
     "editor.dragAndDrop": false,
     "editor.inlayHints.enabled": "off",
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Monokai",
     "workbench.editor.showTabs": "none",
+
+    // Why do they think that its ok to replace what I type with what they _think_ I want to type. I know what I want to type, ok? If I want to list available fields
+    // I press ctrl+space, I it just works out. No need to force something upon me.
     "editor.quickSuggestionsDelay": 999999999,
     "editor.suggest.selectionMode": "never",
     "editor.inlineSuggest.enabled": false,
@@ -19,6 +27,51 @@
     },
     "editor.snippetSuggestions": "none",
     "editor.acceptSuggestionOnCommitCharacter": false,
+
+    // Make stuff work ok on linux, because somehow they dont know how to do that by default and gotta have a setting for it
     "keyboard.dispatch": "keyCode",
-    "window.zoomLevel": -1
+
+    // Make the editor not kill my eyes
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Visual Studio Light",
+
+    // Window management
+    "workbench.editor.closeEmptyGroup" : false,
+
+    // Window control and whatevers, stuff 
+    "workbench.editor.closeEmptyGroups": false, // Dont close editors unless I want them to be closed
+    "workbench.editor.decorations.badges": false, // Remove fruit sallad garbage
+    "workbench.editor.dragToOpenWindow": false, // this is the worst feature ever for individual files in a code editor
+    "workbench.editor.enablePreview": false, // dunna what this is, but I don't want it
+
+    "workbench.editor.mouseBackForwardToNavigate": false, // please dont
+    "workbench.editor.navigationScope": "editor", // Make go back/forwards only local to individual files
+    "workbench.editor.sharedViewState": true,
+    "workbench.editor.splitOnDragAndDrop": false, // Only split when I say so, i.e. use ctrl+p to split
+
+    "window.enableMenuBarMnemonics": false,
+    "window.restoreWindows": "none",
+
+    // Even on windows, nowadays you really want '/' because so many things escape with '\'.
+    "explorer.copyRelativePathSeparator": "/",
+
+    // Dont go to the network, please, ok??
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+
+    // stuff for making ctrl+b not be too horrible
+    "task.allowAutomaticTasks": "off",
+    "task.autoDetect": "off",
+    "problems.defaultViewMode": "table",
+
+    // Dont go to the network without my explicit confirmation please
+    "json.format.keepLines": true,
+    "json.schemaDownload.enable": false,
+
+    // Some random extensions I dont care about
+    "git.openRepositoryInParentFolders": "never",
+    "redhat.telemetry.enabled": false,
+
+    // If there is anything there, its probably from the UI inserting options here, because ms realized that JSON is such a shitty format that they
+    // needed a whole UI for settings, but somehow where to lazy to make a visual editor so now we have both, for our unconvenience.
 }

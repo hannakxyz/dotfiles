@@ -1,4 +1,9 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Hanna's vs code keybinds to make it less of a shitty editor. Still total garbage though.
+// 
+// So fucking stupid that they assume you want ANY default keybind and cant just make your keybinds. I want a file with EVERY single
+// keybind I have and be in total control, not have to unbind their keybinds.
+//
+
 [
     {
         "key": "ctrl+i",
@@ -31,6 +36,10 @@
         "command": "workbench.action.splitEditorRight"
     },
     {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.joinTwoGroups",
+    },
+    {
         "key": "ctrl+k ctrl+\\",
         "command": "-workbench.action.splitEditorRight"
     },
@@ -48,6 +57,8 @@
         "key": "ctrl+k p",
         "command": "-workbench.action.files.copyPathOfActiveFile"
     },
+
+    // Alt+x to execute commands, like in 4coder :-)
     {
         "key": "alt+x",
         "command": "workbench.action.showCommands"
@@ -56,6 +67,8 @@
         "key": "ctrl+shift+p",
         "command": "-workbench.action.showCommands"
     },
+
+    // I kept accidentally pressing these and dont care about them, so removee
     {
         "key": "ctrl+shift+w",
         "command": "-workbench.action.closeWindow"
@@ -87,6 +100,8 @@
         "command": "-workbench.action.closeGroup",
         "when": "activeEditorGroupEmpty && multipleEditorGroups"
     },
+
+    // Kill buffer
     {
         "key": "ctrl+shift+k",
         "command": "workbench.action.closeActiveEditor"
@@ -100,6 +115,8 @@
         "command": "-editor.action.deleteLines",
         "when": "textInputFocus && !editorReadonly"
     },
+
+    // Nice editor features
     {
         "key": "shift+alt+d",
         "command": "editor.action.deleteLines"
@@ -156,6 +173,8 @@
         "key": "ctrl+t",
         "command": "-workbench.action.showAllSymbols"
     },
+
+    // Remove keybinds I dont use
     {
         "key": "ctrl+shift+i",
         "command": "-workbench.action.toggleDevTools",
@@ -181,6 +200,8 @@
         "command": "-notebook.format",
         "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
     },
+
+    // F2 is easier to reach for me
     {
         "key": "f2",
         "command": "editor.action.revealDefinition",
@@ -263,6 +284,8 @@
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
     },
+
+    // ctrl+up/down goes to next blank line
     {
         "key": "ctrl+up",
         "command": "cursorMove",
@@ -279,28 +302,44 @@
         },
         "when": "editorTextFocus"
     },
+
+    // Join lines
+    { "key": "ctrl+j", "command": "editor.action.joinLines" },
+    { "key": "ctrl+j", "command": "-workbench.action.togglePanel" },
+
+    // Toggle the bottom panel
+    { "key": "ctrl+t", "command": "workbench.action.togglePanel" },
+
+    // Close everything because I never remember these binds
+    { "key": "escape", "command": "workbench.action.togglePanel", "when": "view.terminal.visible" },
+    { "key": "escape", "command": "workbench.action.toggleSidebarVisibility", "when": "view.workbench.explorer.fileView.visible" },
+
+    // Navigate in a reasonable way 
+    { "key": "alt+left", "command": "workbench.action.navigateBack", },
+    { "key": "alt+right", "command": "workbench.action.navigateForward", },
+    { "key": "ctrl+alt+-", "command": "-workbench.action.navigateBack", "when": "canNavigateBack" },
+    { "key": "ctrl+shift+-", "command": "-workbench.action.navigateForward", "when": "canNavigateForward" },
+
+    // Because for some stupid reason it doesn't just build, it has to show me a _LIST_ of possible builds do to _EVERY SINGLE TIME_. WTF?
+    { "key": "ctrl+b",          "command": "workbench.action.tasks.runTask", "args": "rust: cargo build" },
+
+    // Pressing ctrl+f is too modal for me.
     {
-        "key": "ctrl+alt+-",
-        "command": "-workbench.action.navigateBack",
-        "when": "canNavigateBack"
+        "key": "alt+m",
+        "command": "editor.action.nextMatchFindAction",
     },
     {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
+        "key": "shift+alt+m",
+        "command": "editor.action.previousMatchFindAction",
     },
-    // {
-    //     "key": "alt+left",
-    //     "command": "cursorUndo",
-    //     "when": "textInputFocus"
-    // },
-    // {
-    //     "key": "ctrl+u",
-    //     "command": "-cursorUndo",
-    //     "when": "textInputFocus"
-    // },
-    // {
-    //     "key": "alt+right",
-    //     "command": "cursorRedo"
-    // },
+
+    // I never want to insert tabs. Tab just serves as the indent/deindent button for me.
+    {
+        "key": "tab",
+        "command": "editor.action.indentLines"
+    },
+    {
+        "key": "shift+tab",
+        "command": "editor.action.outdentLines"
+    },
 ]
